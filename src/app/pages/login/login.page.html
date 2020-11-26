@@ -1,0 +1,70 @@
+<ion-content style="--background: url('assets/images/icons-bg.jpg');">
+  <div class="row p-0 justify-content-center vertical-align">
+    <div class="row justify-content-center" style="width: 400px; min-height: 500px;">
+      <div class="col-12 p-0" style="background-color: #fff;">
+        <div class="row mr-0 ml-0 w-100 justify-content-center">
+          <div class="col-12 mt-5 text-center">
+            <img src="assets/images/logo.png" style="max-height: 150px;">
+          </div>
+        </div>
+        <div class="row mb-2 mt-2 justify-content-center">
+          <div class="col-11 text-center">
+            <p class="txt-18">
+              Faça login para começar a conversar!
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11 form-container">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+              <ion-item>
+                <ion-label position="floating">E-mail</ion-label>
+                <ion-input formControlName="email" type="email"></ion-input>
+                <ion-icon class="vertical-auto-align" name="mail-outline" slot="start"></ion-icon>
+              </ion-item>
+              <div class="validaiton-error-container"
+                *ngIf="form.controls['email'].errors && !form.controls['email'].pristine">
+                <div *ngIf="!this.form.controls['email'].value">
+                  Por favor, informe um endereço de e-mail!
+                </div>
+                <div *ngIf="this.form.controls['email'].value && this.form.controls['email'].hasError('email')">
+                  Por favor, informe um endereço de e-mail válido!
+                </div>
+              </div>
+
+              <ion-item>
+                <ion-label position="floating">Senha</ion-label>
+                <ion-input formControlName="password" [type]="showPassword ? 'text' : 'password'"></ion-input>
+                <ion-icon class="vertical-auto-align" name="lock-closed-outline" slot="start"></ion-icon>
+                <ion-icon class="vertical-auto-align" (click)="showPassword = !showPassword"
+                  [name]="showPassword ? 'eye-outline' : 'eye-off-outline'" slot="end">
+                </ion-icon>
+              </ion-item>
+              <div class="validaiton-error-container"
+                *ngIf="form.controls['password'].errors && !form.controls['password'].pristine">
+                <div *ngIf="!form.controls['password'].value">
+                  Por favor, informe uma senha!
+                </div>
+                <div *ngIf="form.controls['password'].value && form.controls['password'].value.length < 6">
+                  A senha deve conter no mínimo 6 caractéres!
+                </div>
+              </div>
+
+              <div class="row m-0 w-100 justify-content-center">
+                <div class="col-12 p-0 text-center">
+                  <ion-button class="primary-btn mt-4 w-100" type="submit" [disabled]="!form.valid">LOGIN</ion-button>
+                </div>
+              </div>
+            </form>
+            <p class="secondary-text txt-14 mt-5 text-center">Não possui uma conta? <span class="primary-text txt-14"
+                routerLink="/register" routerDirection="forward">Registre-se!</span></p>
+            <p class="secondary-text txt-14 mt-4 text-center">Esqueceu a senha? <span
+                class="primary-text txt-14">Recupere
+                aqui!</span></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</ion-content>

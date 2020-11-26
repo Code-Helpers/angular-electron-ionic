@@ -1,0 +1,19 @@
+.title {
+  color: #000000;
+  font-weight: 700;
+}
+
+.vertical-auto-align {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+ion-item {
+  --background: #F6F7FB;
+}
+
+@media screen and (min-width: 1600px){
+  .form-container {
+    max-width: 500px;
+  }
+} 

@@ -1,0 +1,27 @@
+.title {
+  color: #000000;
+  font-weight: 700;
+}
+
+.vertical-auto-align {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+@media screen and (min-width: 1600px){
+  .form-container {
+    max-width: 500px;
+  }
+}
+
+ion-content {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.vertical-align {
+  min-height: 100%;
+  min-height: 100vh;
+  align-items: center;
+}

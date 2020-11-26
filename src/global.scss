@@ -1,0 +1,71 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+@import '~@ctrl/ngx-emoji-mart/picker';
+
+//Global Rules
+.grey-bg {
+  --background: #F6F7FB;
+  background-color: #F6F7FB;
+}
+
+.txt-14 {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.txt-18 {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.txt-24 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.primary-text {
+  --color: #2038cc;
+  color: #2038cc;
+}
+
+.secondary-text {
+  --color: #7e7979;
+  color: #7e7979;
+}
+
+.primary-btn {
+  --background: #2038CC;
+  --color: #fff;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.validaiton-error-container {
+  --color: #d40b0b;
+  color: #d40b0b;
+}
