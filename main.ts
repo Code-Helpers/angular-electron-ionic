@@ -89,7 +89,7 @@ try {
     }
   });
 
-  app.setAppUserModelId("G1 Messenger");
+  app.setAppUserModelId("angular-electron-ionic");
   
 } catch (e) {
   // Catch Error

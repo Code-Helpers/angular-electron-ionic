@@ -1,12 +1,9 @@
-import { FormsModule } from '@angular/forms';
-import 'reflect-metadata';
-import '../polyfills';
-
 import { LOCALE_ID, NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouteReuseStrategy, RouterModule } from '@angular/router';
-import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -27,11 +24,6 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
-import { PickerModule } from '@ctrl/ngx-emoji-mart';
-import { EmojiModule } from '@ctrl/ngx-emoji-mart/ngx-emoji';
-
-import { MomentModule } from 'angular2-moment';
-
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -49,9 +41,6 @@ import { MomentModule } from 'angular2-moment';
         deps: [HttpClient]
       }
     }),
-    PickerModule,
-    EmojiModule,
-    MomentModule,
     AppRoutingModule
   ],
   providers: [
@@ -62,4 +51,4 @@ import { MomentModule } from 'angular2-moment';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

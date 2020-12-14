@@ -2,8 +2,10 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+
+import { ElectronService } from './services/';
+
 import { AppConfig } from '../environments/environment';
-import { ElectronService } from './services/electron/electron.service';
 
 @Component({
   selector: 'app-root',
